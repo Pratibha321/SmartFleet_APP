@@ -1,0 +1,34 @@
+services:
+  driverservice:
+    image: ${DOCKER_REGISTRY-}driverservice
+    build:
+      context: .
+      dockerfile: DriverService\Dockerfile
+
+  notificationservice:
+    image: ${DOCKER_REGISTRY-}notificationservice
+    build:
+      context: .
+      dockerfile: NotificationService\Dockerfile
+
+
+  telemetryservice:
+    image: ${DOCKER_REGISTRY-}telemetryservice
+    build:
+      context: .
+      dockerfile: TelemetryService\Dockerfile
+
+
+  tripservice:
+    image: ${DOCKER_REGISTRY-}tripservice
+    build:
+      context: .
+      dockerfile: TripService\Dockerfile
+
+
+  vehicleservice:
+    image: ${DOCKER_REGISTRY-}vehicleservice
+    build:
+      context: .
+      dockerfile: VehicleService\Dockerfile
+

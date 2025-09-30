@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "driverservice": "StartDebugging",
+        "notificationservice": "StartDebugging",
+        "telemetryservice": "StartDebugging",
+        "tripservice": "StartDebugging",
+        "vehicleservice": "StartDebugging"
+      }
+    }
+  }
+}

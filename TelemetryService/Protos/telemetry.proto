@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+option csharp_namespace = "TelemetryService.Protos";
+package telemetry;
+
+message TelemetryPoint {
+  string vehicleId = 1;
+  double speed = 2;
+  double latitude = 3;
+  double longitude = 4;
+  double fuelLevel = 5;
+  string timestamp = 6;
+}
+
+message TelemetryAck {
+  string message = 1;
+}
+
+service TelemetryCollector {
+  rpc StreamTelemetry (stream TelemetryPoint) returns (TelemetryAck);
+}
